@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dopamine Awareness – The Motivation Chemical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 0, 255, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 50%);
+        }
+
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #FFD700, #FF8C00, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px rgba(255, 215, 0, 0.3),
+                             0 0 40px rgba(255, 140, 0, 0.2);
+            }
+            to {
+                text-shadow: 0 0 30px rgba(255, 215, 0, 0.5),
+                             0 0 60px rgba(255, 140, 0, 0.4),
+                             0 0 80px rgba(255, 20, 147, 0.3);
+            }
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 20px auto;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        section {
+            padding: 80px 10%;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #00DBDE, #FC00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(45deg, #00DBDE, #FC00FF);
+            border-radius: 3px;
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #FFD700;
+            margin-top: 25px;
+            text-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #87CEEB;
+            margin: 15px 0;
+        }
+
+        p {
+            line-height: 1.9;
+            font-size: 1.2rem;
+            color: #E6E6FA;
+            margin-bottom: 20px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #FFD700, #FF8C00) border-box;
+        }
+
+        .image-grid img:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 50px rgba(255, 140, 0, 0.4);
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.1), rgba(0, 191, 255, 0.1));
+            border: 2px solid;
+            border-image: linear-gradient(45deg, #FF1493, #00BFFF) 1;
+            padding: 35px;
+            border-radius: 20px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, transparent 60%, rgba(255, 255, 255, 0.05) 60%),
+                linear-gradient(-45deg, transparent 60%, rgba(255, 255, 255, 0.05) 60%);
+            z-index: 0;
+        }
+
+        .highlight > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Team Section Styles */
+        .team-section {
+            background: linear-gradient(135deg, 
+                rgba(106, 17, 203, 0.2), 
+                rgba(37, 117, 252, 0.2),
+                rgba(255, 20, 147, 0.15));
+            border-radius: 30px;
+            padding: 50px 40px;
+            margin: 50px 0;
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #6a11cb, #2575fc, #FF1493) 1;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(0, 219, 222, 0.15) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .team-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .team-header h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FF8C00, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .team-header p {
+            font-size: 1.3rem;
+            color: #E6E6FA;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(45deg, #00DBDE, #FC00FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: #FFD700;
+            font-weight: 600;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            border-radius: 25px;
+            padding: 30px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 2px solid transparent;
+            border-radius: 25px;
+            background: linear-gradient(45deg, #FFD700, #FF8C00, #FF1493, #00DBDE) border-box;
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .team-member:hover::before {
+            opacity: 1;
+        }
+
+        .team-member:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(255, 140, 0, 0.3);
+        }
+
+        .member-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            border: 4px solid transparent;
+            background: linear-gradient(45deg, #6a11cb, #2575fc, #00DBDE, #FC00FF) border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .member-avatar::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(106, 17, 203, 0.8), rgba(37, 117, 252, 0.8));
+            z-index: -1;
+        }
+
+        .member-avatar span {
+            background: linear-gradient(45deg, #FFD700, #FFFFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .team-member h4 {
+            color: #FFD700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .member-role {
+            color: #00DBDE;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            padding: 8px 20px;
+            background: rgba(0, 219, 222, 0.15);
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .member-details {
+            color: #E6E6FA;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+
+        .member-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .skill-tag {
+            background: linear-gradient(45deg, rgba(255, 20, 147, 0.2), rgba(255, 215, 0, 0.2));
+            color: #FFD700;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        .team-collaboration {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 219, 222, 0.1));
+            border-radius: 25px;
+            padding: 40px;
+            margin-top: 60px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #FFD700, #00DBDE) 1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .collaboration-title {
+            color: #FFD700;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .collaboration-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: start;
+        }
+
+        .collaboration-text {
+            color: #E6E6FA;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .collaboration-highlights {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .collaboration-highlights h4 {
+            color: #00DBDE;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .collaboration-highlights ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .collaboration-highlights li {
+            color: #E6E6FA;
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .collaboration-highlights li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #FFD700;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .team-achievements {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 50px;
+            padding: 40px;
+            background: linear-gradient(45deg, rgba(106, 17, 203, 0.2), rgba(255, 20, 147, 0.2));
+            border-radius: 25px;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #6a11cb, #FF1493) 1;
+        }
+
+        .achievement-item {
+            text-align: center;
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .achievement-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: #FFD700;
+            display: block;
+        }
+
+        .achievement-text {
+            color: #E6E6FA;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .team-quote {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 219, 222, 0.1));
+            border-radius: 25px;
+            border-left: 5px solid #FFD700;
+            border-right: 5px solid #00DBDE;
+            position: relative;
+        }
+
+        .team-quote p {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #FFFFFF;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .team-quote::before,
+        .team-quote::after {
+            content: '"';
+            font-size: 6rem;
+            color: rgba(255, 215, 0, 0.3);
+            position: absolute;
+        }
+
+        .team-quote::before {
+            top: 10px;
+            left: 20px;
+        }
+
+        .team-quote::after {
+            bottom: -30px;
+            right: 20px;
+        }
+
+        /* Other sections styles */
+        .project-description {
+            background: linear-gradient(135deg, rgba(106, 17, 203, 0.3), rgba(37, 117, 252, 0.3));
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #6a11cb, #2575fc) 1;
+            backdrop-filter: blur(5px);
+        }
+
+        .natural-methods-section {
+            background: linear-gradient(135deg, rgba(0, 219, 222, 0.1), rgba(252, 0, 255, 0.1));
+            border-radius: 25px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, #00DBDE, #FC00FF) 1;
+        }
+
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        .methods-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .methods-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.2rem;
+            position: relative;
+            padding-left: 35px;
+        }
+
+        .methods-list li:before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #FFD700;
+        }
+
+        .interview-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .interview-images img {
+            width: 48%;
+            max-width: 450px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            background: linear-gradient(45deg, #00DBDE, #FC00FF) border-box;
+        }
+
+        .interview-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 25px 50px rgba(0, 219, 222, 0.4);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 165, 0, 0.1));
+            border: 3px solid;
+            border-image: linear-gradient(45deg, #FF0000, #FFA500) 1;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .warning-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            font-size: 8rem;
+            opacity: 0.2;
+            transform: rotate(15deg);
+        }
+
+        .warning-title {
+            color: #FF4500;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 69, 0, 0.3);
+        }
+
+        .survey-section {
+            background: linear-gradient(45deg, #FF416C, #FF4B2B);
+            border-radius: 30px;
+            padding: 60px 40px;
+            margin: 60px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(255, 65, 108, 0.4);
+        }
+
+        .survey-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1%, transparent 1%);
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(50px, 50px) rotate(360deg); }
+        }
+
+        .survey-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #00DBDE, #FC00FF);
+            color: white;
+            padding: 22px 50px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 30px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 30px rgba(0, 219, 222, 0.4);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .survey-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FC00FF, #00DBDE);
+            transition: all 0.6s ease;
+            z-index: -1;
+        }
+
+        .survey-button:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(252, 0, 255, 0.6);
+        }
+
+        .survey-button:hover::before {
+            left: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(45deg, #0f0c29, #302b63);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                linear-gradient(45deg, transparent 60%, rgba(255, 255, 255, 0.05) 60%),
+                linear-gradient(-45deg, transparent 60%, rgba(255, 255, 255, 0.05) 60%);
+        }
+
+        .nav-bar {
+            background: rgba(15, 12, 41, 0.95);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid;
+            border-image: linear-gradient(45deg, #6a11cb, #2575fc) 1;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 10px 25px;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+        .nav-links a:hover::before {
+            left: 0;
+        }
+
+        .quote-box {
+            background: linear-gradient(45deg, rgba(255, 215, 0, 0.1), rgba(255, 140, 0, 0.1));
+            border-left: 5px solid;
+            border-image: linear-gradient(45deg, #FFD700, #FF8C00) 1;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 0 20px 20px 0;
+            font-style: italic;
+            font-size: 1.3rem;
+            position: relative;
+        }
+
+        .quote-box::after {
+            content: '"';
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 4rem;
+            color: rgba(255, 215, 0, 0.2);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 215, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .interview-images img {
+                width: 100%;
+                height: 300px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .survey-button {
+                padding: 18px 35px;
+                font-size: 1.2rem;
+            }
+            
+            .team-header h2 {
+                font-size: 2.5rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 25px;
+            }
+            
+            .team-member {
+                min-height: 300px;
+                padding: 25px;
+            }
+            
+            .member-avatar {
+                width: 100px;
+                height: 100px;
+                font-size: 2.8rem;
+            }
+            
+            .collaboration-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .achievement-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-bar">
+    <div class="nav-links">
+        <a href="#home">🏠 Home</a>
+        <a href="#about">📋 Project</a>
+        <a href="#addiction">🚫 Addiction</a>
+        <a href="#brain">🧠 Brain Science</a>
+        <a href="#natural">🌿 Natural Boosters</a>
+        <a href="#dangers">⚠️ Health Dangers</a>
+        <a href="#interviews">🎤 Research</a>
+        <a href="#team">👥 Our Team</a>
+        <a href="#survey">📝 Take Survey</a>
+    </div>
+</div>
+
+<header id="home">
+    <h1>DOPAMINE AWARENESS</h1>
+    <h3>The Neuroscience of Motivation, Focus & Reward</h3>
+    <p>An interactive initiative educating teenagers about dopamine balance and healthy lifestyle choices</p>
+</header>
+
+<section id="about">
+    <h2>About Our Project</h2>
+    <div class="project-description">
+        <h3>🌟 Project Overview</h3>
+        <p><strong>Topic:</strong> Health and Wellbeing</p>
+        <p><strong>Focus Issue:</strong> Dopamine imbalances fuelling addiction which impacts behaviour and bodily functions of teenagers</p>
+        
+        <h4>🎯 Our Aim:</h4>
+        <p>To spread awareness about dopamine imbalances and how to prevent dopamine intake from unhealthy sources while promoting natural alternatives.</p>
+        
+        <h4>📊 Project Description:</h4>
+        <p>This website represents our comprehensive research into dopamine-related behaviors among teenagers. Through interviews, surveys, and community outreach, we've gathered insights about how dopamine affects motivation, focus, and addiction patterns.</p>
+        
+        <div class="quote-box">
+            <h4>"Our success is measured by the awareness we create in schools, local communities, and through social media engagement."</h4>
+        </div>
+    </div>
+</section>
+
+<section id="addiction">
+    <h2>Dopamine & Modern Addiction</h2>
+    <div class="highlight">
+        <h4>💭 Addiction...this word is deeper than you think. When one thinks about addiction, the first thing that comes to mind is usually substance abuse, however it wears many faces.</h4>
+        <h4>📱 All the way from smartphones to gambling, addiction encompasses countless matters.</h4>
+        <h4>⚡ However, the factor, the trigger, the element that causes the feeling of addiction is none other than dopamine. Dopamine is basically a brain chemical that helps control reward, learning and motivation. Neurons in the brain release dopamine when one does an activity that is pleasurable and rewarding.</h4>
+        <h4>🔄 When it is released, it signals to the brain that "this action gave a reward, repeat it".</h4>
+    </div>
+</section>
+
+<section id="brain">
+    <h2>Dopamine & The Brain</h2>
+    <p>Dopamine travels between neurons using neural pathways. It affects learning, memory, movement, and emotional responses. Balanced dopamine levels help maintain mental well-being.</p>
+
+    <div class="image-grid">
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 1159px">
+                <img alt="image 1" height="346" src="C:\Users\Nishant Parikh\OneDrive\Desktop\7b0f8adc-862a-44cd-8ae7-8bf851ef0f57.jpeg" style="width: 550px"></td>
+                <td>&nbsp;</td>
+                <td>
+                 <img alt="image 4" height="310" src="C:\Users\Nishant Parikh\OneDrive\Desktop\4575664e-5805-4913-b8b3-b8c47ae2fd88.jpeg" style="width: 550px"></td>
+                <td><br>
+                </td>
+            </tr>
+<tr>
+<td>
+<img alt="image 3" height="200px" src="C:\Users\Nishant Parikh\OneDrive\Desktop\8664c017-1f06-402a-83fe-bc5d0ff6cb33.jpeg" style="width: 550px">
+</td>
+</tr>
+        </table>
+    </div>
+</section>
+
+<section id="natural">
+    <h2>✨ Natural Dopamine Boosters</h2>
+    <div class="natural-methods-section">
+        <p>Instead of artificial sources, here are scientifically-proven natural methods to maintain healthy dopamine levels:</p>
+        
+        <div class="methods-grid">
+            <div>
+                <h3>🥗 DIET & NUTRITION</h3>
+                <ul class="methods-list">
+                    <li>Protein-rich foods (chicken, fish, eggs)</li>
+                    <li>Tyrosine-rich foods (almonds, bananas, avocados)</li>
+                    <li>Omega-3 fatty acids (salmon, walnuts, flaxseeds)</li>
+                    <li>Probiotics (yogurt, kefir, fermented foods)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>🏃 EXERCISE & ACTIVITIES</h3>
+                <ul class="methods-list">
+                    <li>Aerobic exercise (running, swimming, cycling)</li>
+                    <li>Resistance training (weight lifting)</li>
+                    <li>High-intensity interval training (HIIT)</li>
+                </ul>
+            </div>
+            <div>
+                <h3>☀️ SUNLIGHT & NATURE</h3>
+                <ul class="methods-list">
+                    <li>Daily sunlight exposure (15-30 minutes)</li>
+                    <li>Nature walks and hiking</li>
+                    <li>Gardening and outdoor activities</li>
+                </ul>
+            </div>
+            <div>
+                <h3>🧘 MINDFULNESS & MEDITATION</h3>
+                <ul class="methods-list">
+                    <li>Mindfulness meditation</li>
+                    <li>Deep breathing exercises</li>
+                    <li>Yoga and tai chi</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="quote-box">
+            <h4>Remember: Natural dopamine regulation through healthy lifestyle choices is safer and more sustainable than artificial supplements.</h4>
+        </div>
+    </div>
+</section>
+
+<section id="dangers">
+    <h2>⚠️ Health Dangers</h2>
+    <div class="warning-box">
+        <div class="warning-title">DANGERS OF ARTIFICIAL DOPAMINE SOURCES</div>
+        <p>Our research focuses on <strong>preventing dopamine intake from unhealthy sources</strong>. These include:</p>
+        
+        <ul class="methods-list">
+            <li>Excessive social media and screen time</li>
+            <li>Gambling and risk-seeking behaviors</li>
+            <li>Substance abuse (drugs, alcohol)</li>
+            <li>Unhealthy eating habits (sugar addiction)</li>
+            <li>Unregulated supplements and medications</li>
+        </ul>
+        
+        <p><strong>Why avoid artificial dopamine boosters?</strong></p>
+        <p>1. <strong>Addiction Risk:</strong> Artificial sources can create dependency</p>
+        <p>2. <strong>Tolerance Build-up:</strong> You need more to get the same effect</p>
+        <p>3. <strong>Natural Balance Disruption:</strong> Your brain's natural regulation gets impaired</p>
+        <p>4. <strong>Withdrawal Symptoms:</strong> Stopping can cause depression and anxiety</p>
+        
+        <p style="margin-top: 30px; font-size: 1.4rem; color: #FFD700; text-align: center;">
+            <strong>Our Message:</strong> Focus on natural, sustainable ways to maintain dopamine balance!
+        </p>
+    </div>
+</section>
+
+<section id="survey">
+    <div class="survey-section">
+        <h2 style="color: white; -webkit-text-fill-color: white;">📊 Take Our Survey!</h2>
+        <h3 style="color: white;">Help us understand dopamine awareness among teenagers</h3>
+        <p style="color: white; font-size: 1.3rem;">Your input will help us improve our awareness programs and reach more people effectively.</p>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdSIPCHYcO_ZWXZENVR3P5YIzFbGsNcBABB9FRuz94WSTcMAA/viewform?usp=header" 
+           target="_blank" class="survey-button pulse">
+           📝 TAKE THE SURVEY NOW
+        </a>
+        
+        <p style="color: white; margin-top: 20px; font-size: 1.1rem;">Takes only 3-5 minutes | All responses are anonymous</p>
+    </div>
+</section>
+
+<section id="interviews">
+    <h2>🎤 Our Research and Interviews</h2>
+    <p>As part of our project, we conducted interviews with experts and community members to understand dopamine-related behaviors and addiction patterns among teenagers.</p>
+    
+    <div class="interview-images">
+<p><h1><b><i><u>Interview with Biology Teacher- Ms. Shobha Menon</u></i></b></h1></p>
+        <video alt="Interview with Ms.Shobha Menon" height="600" src="C:\Users\Nishant Parikh\Downloads\Untitled video - Made with Clipchamp (1).mp4" width="800" controls/>
+    </div>
+<p><mark>With 11 years of teaching experience, Ms. Shobha Menon specialises in Biology (IGCSE /A Levels / IBDP) and Environmental Management (IGCSE). She is a Cambridge Assessment Specialist and has received Cambridge Trainings. As a MISA Facilitator /Moderator and Cambridge Assessment Specialist, she is dedicated to providing quality education and nurturing students' academic growth.</mark></p>
+<div class="interview-images">
+<p><h1><b><i><u>Interview with Teen Athlete- Mr. Maahir Shah</u></i></b></h1></p>
+        <video alt="Interview with Mr. Maahir Shah" height="600" src="C:\Users\Nishant Parikh\OneDrive\Desktop\Untitled video - Made with Clipchamp.mp4" width="800" controls/>
+    </div>
+<p><mark>Maahir Shah is a talented and diligent teen athlete who has won numerous honours for his steady performance in competitive sports. He combines explosive speed, agility, and strength with high technical skill, specialising in the long jump and sprint running. He stands out as a track and field athlete with great potential for future success because of his focused training, competitive mentality, and capacity to perform under pressure.</mark></p>
+<div class="interview-images">
+<p><h1><b><i><u>Interview with Dermatologist- Dr. Ankit Raval</u></i></b></h1></p>
+        <video alt="Interview with Dr. Ankit Raval" height="600" src="C:\Users\Nishant Parikh\Videos\video1791179771.mp4" width="800" controls/>
+    </div>
+<p><mark>Dr. Ankit Raval, MBBS, is a consultant dermatologist, cosmetologist, and hair transplant surgeon based in Mumbai. He is the Director of H & A Speciality Clinic in Andheri West, where he focuses on the diagnosis and treatment of skin and hair conditions, cosmetic dermatology procedures, and hair restoration. With a strong clinical foundation from his medical training, Dr. Raval is known for his patient-centric approach, emphasizing personalized treatment plans, clear guidance, and long-term skin and hair health outcomes.</mark></p>
+ <div class="interview-images">
+<p><h1><b><i><u>Interview with Physician- Dr. Ila D. Shah</u></i></b></h1></p><h5 style="color: #00e5ff; text-shadow: 0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;">(We apologize for the brief disturbance during the interview due to an incoming call on the doctor's phone)</h5>
+        <video alt="Interview with Dr. Ila D. Shah" height="600" src="C:\Users\Nishant Parikh\Downloads\WhatsApp Video 2026-01-21 at 16.27.25.mp4" width="800" controls/>
+    </div> 
+<p><mark>Dr. Ila D. Shah is a renowned homeopathic physician based in Mumbai with over 30 years of experience in patient care. She specializes in skin disorders, allergies, weight management, and holistic wellness, combining her deep knowledge of homeopathy with a personalized approach to treatment. She is recognized for her compassionate care and dedication to improving patients' overall health.</mark></p>  
+    <div style="margin-top: 40px;">
+        <h3>🔍 Key Findings from Our Research:</h3>
+        <ul class="methods-list">
+            <li>Teenagers are particularly vulnerable to dopamine-driven addictive behaviors</li>
+            <li>Screen time and social media are major sources of unhealthy dopamine spikes</li>
+            <li>Education about natural dopamine regulation is lacking in schools</li>
+            <li>Early intervention can prevent long-term addiction issues</li>
+        </ul>
+    </div>
+</section>
+
+<section id="team">
+    <div class="team-section">
+        <div class="team-header">
+            <h2>👥 Our Dream Team</h2>
+            <p>Meet the passionate individuals behind this dopamine awareness initiative. Each member brings unique skills and expertise to create meaningful impact.</p>
+        </div>
+
+        <div class="team-stats">
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Team Members</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4</span>
+                <span class="stat-label">Interviews Conducted</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100</span>
+                <span class="stat-label">Survey Responses</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">1</span>
+                <span class="stat-label">Shared Vision</span>
+            </div>
+        </div>
+<div class="team-grid">
+
+
+            <div class="team-member">
+                <div class="member-avatar"><span><img alt="Image of Nivaan Parikh" height="160" src="C:\Users\Nishant Parikh\OneDrive\Desktop\9803ba11-a97d-44a2-b9f2-7aa0c4525fa8.jpeg" width="120"></span></div>
+                <h4>Nivaan Parikh</h4>
+                <div class="member-role">Interview management</div>
+                <div class="member-details">Orchestrated interviews with various experts to acquire precious knowledge about dopamine dysregulation.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Website Development</span><br>
+                    <span class="skill-tag">Research Specialist</span><br>
+                    <span class="skill-tag">Skilled Interviewer</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><span>
+					<img alt="Image of Reyaansh Shah" height="145" src="C:\Users\Nishant Parikh\OneDrive\Desktop\7fc09a6a-f5f1-4b53-ae14-9f82ce1aeb3e.jpeg" width="135"></span></div>
+                <h4>Reyaansh Shah</h4>
+                <div class="member-role">Outreach Specialist</div>
+                    <div class="member-details">Connected with local communities to gather authentic insights about dopamine-driven behaviors.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Public Speaking</span>
+                    <span class="skill-tag">Community Engagement</span>
+                    <span class="skill-tag">Website Development</span>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><span><img alt="Image of Nishka Kambiri" height="150" src="C:\Users\Nishant Parikh\OneDrive\Desktop\8309a370-dc10-443e-be65-eae8d14af74b.jpeg" width="145"></span></div>
+                <h4>Nishka Kambiri</h4>
+                <div class="member-role">Design Strategist</div>
+                <div class="member-details">Crafted engaging surveys and designed the visual architecture of our awareness platform.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Survey Designer</span>
+                    <span class="skill-tag">Data Analysis</span>
+                    <span class="skill-tag">Website Development</span>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar"><span><img alt="Image of Suhaan Gakhar" height="150" src="C:\Users\Nishant Parikh\OneDrive\Desktop\2bb59158-8661-4825-9c2c-b8e86bbda881 (1).jpeg" width="145"></span></div>
+                <h4>Suhaan Gakhar</h4>
+                <div class="member-role">Social Media Director</div>
+                <div class="member-details">Amplified our message across digital platforms to disseminate information about addiction.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Digital Marketing</span>
+                    <span class="skill-tag">Content Strategy</span>
+                    <span class="skill-tag">Audience Growth</span>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar"><span><img alt="Image of Aryaki Shah" height="150" src="C:\Users\Nishant Parikh\OneDrive\Desktop\0ecd6926-b11b-4b9c-a694-3740599b74d6.jpeg" width="130"></span></div>
+                <h4>Aryaki Shah</h4>
+                <div class="member-role">Social Media Director</div>
+                <div class="member-details">Developed compelling content that makes complex neuroscience accessible to teenagers.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Content Creation</span>
+                    <span class="skill-tag">Science Communication</span>
+                    <span class="skill-tag">Creative Writing</span>
+                </div>
+            </div>
+
+            <div class="team-member">
+                <div class="member-avatar"><span><img alt="Image of Advait Rathi" height="150" src="C:\Users\Nishant Parikh\OneDrive\Desktop\21af8471-40cb-4c62-b17d-4e9b9c75f5d9 (1).jpeg" width="130"></span></div>
+                <h4>Advait Rathi</h4>
+                <div class="member-role">Research Analyst</div>
+                <div class="member-details">Compiled and analyzed scientific data to build evidence-based awareness strategies.</div>
+                <div class="member-skills">
+                    <span class="skill-tag">Data Research</span>
+                    <span class="skill-tag">Analytical Thinking</span>
+                    <span class="skill-tag">Scientific Methodology</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-quote">
+            <p>"Individually, we are one drop. Together, we are an ocean. Our collective effort in understanding dopamine can create waves of positive change in teenage mental health."</p>
+          
+        </div>
+
+        <div class="team-collaboration">
+            <div class="collaboration-title">🤝 Our Collaborative Journey</div>
+            <div class="collaboration-content">
+                <div class="collaboration-text">
+                    <p>Our team worked in perfect harmony, with each member contributing their unique strengths to create something greater than the sum of its parts. From the initial research phase to the final website launch, we maintained constant communication and supported each other's growth.</p>                   
+                     <p>This synergy allowed us to create a comprehensive awareness platform that combines scientific accuracy with engaging presentation.</p>
+                </div>
+                <div class="collaboration-highlights">
+                    <h4>Collaboration Highlights</h4>
+                    <ul>
+                        <li>Weekly strategy meetings to align goals</li>
+                        <li>Cross-functional skill sharing sessions</li>
+                        <li>Peer review system for quality assurance</li>
+                        <li>Shared documentation and resource library</li>
+                        <li>Regular feedback loops for continuous improvement</li>
+                        <li>Celebrating milestones and individual contributions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="team-achievements">
+            <div class="achievement-item">
+                <div class="achievement-icon">🎯</div>
+                <div class="achievement-text">Successfully interviewed healthcare professionals and educators</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">📊</div>
+                <div class="achievement-text">Analyzed survey responses from different age groups</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">🌐</div>
+                <div class="achievement-text">Created comprehensive digital awareness platforms</div>
+            </div>
+            <div class="achievement-item">
+                <div class="achievement-icon">📈</div>
+                <div class="achievement-text">Reached 250+ people through social media campaigns</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>⚖️ Why Dopamine Balance Matters</h2>
+    <p>
+        Healthy dopamine levels help with concentration, motivation, and emotional control. Too little
+        dopamine can lead to lack of motivation, while too much stimulation from screens or artificial sources
+        can reduce dopamine sensitivity and lead to addiction.
+    </p>
+    
+    <div class="highlight">
+        <h4>🎯 Our Ultimate Goal:</h4>
+        <p>To empower teenagers with knowledge about how dopamine works and how to maintain healthy levels through natural lifestyle choices rather than turning to unhealthy or artificial sources.</p>
+    </div>
+</section>
+
+<footer>
+    <h3 style="color: #FFD700;">🌐 Connect With Us</h3>
+    <p style="font-size: 1.2rem; text-align: center">Our Youtube Channel:</p>
+    <div style="margin: 30px 0;">
+        <img alt="QR code of YouTube Channel" height="200" src="C:\Users\Nishant Parikh\OneDrive\Desktop\71a13cc9-6f97-4afa-aabd-1e620321f309.jpeg" width="160" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 3px solid #FFD700;">
+    </div>
+    <p style="font-size: 1.2rem; text-align: center">Our Instagram Page:</p>
+    
+    <div style="margin: 30px 0;">
+        <img alt="QR code of Instagram Page" height="200" src="C:\Users\Nishant Parikh\OneDrive\Desktop\Screenshot 2026-01-21 173538.jpeg" width="160" style="border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 3px solid #FFD700;">
+    </div>
+    
+    <p style="margin-top: 30px; font-size: 1rem; color: #FFD700;">© 2026 Team Project Group 7 - Dopamine Awareness Initiative</p>
+    <p style="font-size: 1rem; color: #87CEEB;">A project dedicated to educating teenagers about healthy dopamine regulation</p>
+</footer>
+
+</body>
+</html>
